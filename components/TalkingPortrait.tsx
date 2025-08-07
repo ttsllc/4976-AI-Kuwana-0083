@@ -1,11 +1,12 @@
 'use client'
 
 import { useRef, useEffect, useState } from 'react'
+import { EmotionType } from '@/lib/emotionAnalyzer'
 
 interface TalkingPortraitProps {
   imageUrl?: string
   isSpeaking?: boolean
-  emotion?: 'neutral' | 'happy' | 'surprised' | 'thinking' | 'sad' | 'angry'
+  emotion?: EmotionType
   size?: number
 }
 

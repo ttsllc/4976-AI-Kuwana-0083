@@ -4,6 +4,7 @@ import { useRef, useEffect, useState, Suspense, useMemo } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
+import { EmotionType } from '@/lib/emotionAnalyzer'
 
 // 顔のランドマークから3D形状を制御するためのインターフェース
 interface FacialExpressions {
@@ -36,7 +37,7 @@ interface Avatar3DProps {
   imageUrl?: string
   isPlaying?: boolean
   isSpeaking?: boolean
-  emotion?: 'neutral' | 'happy' | 'surprised' | 'thinking' | 'sad' | 'angry'
+  emotion?: EmotionType
   size?: number
   expressions?: FacialExpressions
   settings?: Avatar3DSettings

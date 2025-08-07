@@ -5,12 +5,13 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import * as THREE from 'three'
+import { EmotionType } from '@/lib/emotionAnalyzer'
 
 interface ReadyPlayerMeAvatarProps {
   avatarUrl?: string
   isPlaying?: boolean
   isSpeaking?: boolean
-  emotion?: 'neutral' | 'happy' | 'surprised' | 'thinking' | 'sad' | 'angry'
+  emotion?: EmotionType
   size?: number
 }
 

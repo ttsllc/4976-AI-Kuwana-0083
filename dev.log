@@ -461,3 +461,6 @@ Custom voices: 2
  POST /api/chat 200 in 9959ms
  POST /api/text-to-speech 200 in 24495ms
  POST /api/text-to-speech 200 in 25590ms
+ ✓ Compiled in 36ms
+ ✓ Compiled in 36ms
+ ✓ Compiled in 37ms

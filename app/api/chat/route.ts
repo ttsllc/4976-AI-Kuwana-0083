@@ -5,7 +5,7 @@ import { existsSync } from 'fs'
 import path from 'path'
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || 'placeholder-key',
 })
 
 const PERSONALITY_FILE = path.join(process.cwd(), 'data', 'personality', 'settings.json')

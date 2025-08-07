@@ -3,7 +3,7 @@ import OpenAI from 'openai'
 import { ElevenLabsClient } from '@elevenlabs/elevenlabs-js'
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY || 'placeholder-key',
 })
 
 const elevenlabs = new ElevenLabsClient({

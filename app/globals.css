@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-noto-sans-jp), var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,5 +22,33 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans-jp), var(--font-geist-sans), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', system-ui, sans-serif;
+}
+
+/* 日本語フォントの最適化 */
+* {
+  font-feature-settings: "palt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* 漢字の表示を改善 */
+.japanese-text {
+  font-family: 'Noto Sans JP', var(--font-noto-sans-jp), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', 'MS Gothic', sans-serif !important;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 強制的に日本語フォント適用 */
+.force-japanese {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', 'MS Gothic', monospace !important;
+  font-weight: 500 !important;
+}
+
+/* デバッグ用：フォントが正しく読み込まれているか確認 */
+.font-debug {
+  border: 2px solid red;
+  background: yellow;
+  padding: 4px;
 }

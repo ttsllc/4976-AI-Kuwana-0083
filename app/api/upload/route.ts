@@ -1,7 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { writeFile, mkdir } from 'fs/promises'
-import { existsSync } from 'fs'
-import path from 'path'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,7 +10,7 @@ export async function POST(request: NextRequest) {
     }
 
     // ファイルタイプの検証
-    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp']
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg']
     if (!allowedTypes.includes(file.type)) {
       return NextResponse.json(
         { error: 'JPG、PNG、WebP形式の画像のみアップロード可能です' },
@@ -29,34 +26,24 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // アップロードディレクトリの作成
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads')
-    if (!existsSync(uploadDir)) {
-      await mkdir(uploadDir, { recursive: true })
-    }
-
-    // ファイル名の生成（タイムスタンプ付き）
-    const timestamp = Date.now()
-    const extension = file.name.split('.').pop()
-    const fileName = `avatar_${timestamp}.${extension}`
-    const filePath = path.join(uploadDir, fileName)
-
-    // ファイルの保存
+    // ファイルをBase64に変換（Vercelサーバーレス環境対応）
     const bytes = await file.arrayBuffer()
     const buffer = Buffer.from(bytes)
-    await writeFile(filePath, buffer)
+    const base64 = buffer.toString('base64')
+    const dataUrl = `data:${file.type};base64,${base64}`
 
-    const fileUrl = `/uploads/${fileName}`
-
+    // ファイル情報を返す（Base64データURL形式）
     return NextResponse.json({
-      message: 'ファイルがアップロードされました',
-      fileUrl,
-      fileName
+      message: 'ファイルが処理されました',
+      fileUrl: dataUrl,
+      fileName: file.name,
+      fileSize: file.size,
+      fileType: file.type
     })
   } catch (error) {
     console.error('Upload error:', error)
     return NextResponse.json(
-      { error: 'ファイルのアップロードに失敗しました' },
+      { error: 'ファイルの処理に失敗しました' },
       { status: 500 }
     )
   }

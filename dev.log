@@ -470,3 +470,137 @@ Custom voices: 2
  ✓ Compiled in 27ms
  ✓ Compiled in 25ms
  ✓ Compiled in 32ms
+ ✓ Compiled in 34ms
+ ✓ Compiled in 80ms
+ ✓ Compiled / in 87ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 652ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.q7p6fkvdryi'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.q7p6fkvdryi'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.u3u8b17hgpe'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.u3u8b17hgpe'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.fjwyyo201gm'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.fjwyyo201gm'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.y5cao42vwkl'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.y5cao42vwkl'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.jefyuwwqiwh'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.jefyuwwqiwh'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ijfwoxod48f'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ijfwoxod48f'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.8rtzcfpavgr'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.8rtzcfpavgr'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ibv4tkvza5q'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ibv4tkvza5q'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.2lrqrrewfkc'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.2lrqrrewfkc'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/favicon.ico/[__metadata_id__]/route/app-paths-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/favicon.ico/[__metadata_id__]/route/app-paths-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.497b74j0kgi'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.497b74j0kgi'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/server/app/page/build-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.6ak1kjlehpr'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.6ak1kjlehpr'
+}
+[Error: ENOENT: no such file or directory, open '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ool5e7bzwne'] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/akioiwaki/Documents/app/app-kuwana-0807_/ai-avatar-app/.next/static/development/_buildManifest.js.tmp.ool5e7bzwne'
+}
+ ✓ Compiled in 22ms
+ ✓ Compiled in 64ms
+ ✓ Compiled in 25ms

@@ -30,6 +30,47 @@ export default function PersonalitySetup({ onSave }: PersonalitySetupProps) {
   const [isSaving, setIsSaving] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
+  // プリセットキャラクター
+  const presetCharacters = [
+    {
+      id: 'joke-kuwana',
+      name: '冗談好きAI桑名社長',
+      description: '関西弁で駄洒落を交えながら車買取アドバイスをする明るいキャラクター',
+      emoji: '😄',
+      data: {
+        name: 'AI桑名社長 #0083',
+        personality: 'お茶目で親しみやすく、冗談とユーモアを交えながら車買取・販売のプロフェッショナルアドバイスをする明るい社長キャラクター',
+        speakingStyle: '関西弁風の親しみやすい口調で、必ず会話に軽いジョークや駄洒落を織り込む。「〜やで」「〜やろ？」「〜やんか」などの関西弁と、車に関する駄洒落を多用する',
+        interests: ['車買取・販売', '駄洒落', '漫才', 'お客様を笑わせること', '奇跡の査定', '車関連の冗談', '関西のノリ', 'お笑い'],
+        conversationExamples: [
+          'いらっしゃい！車の買取なら任せとき〜！査定額で「きゃー定」しちゃうで〜（笑）',
+          'その車、走行距離はどのくらいやろ？まさか地球を一周しとるんちゃうやろなー？ハハハ！',
+          '車検切れ？心配いらんで！私が「しゃ〜検」したげるわ〜！なんちって〜',
+          '燃費が悪い？それなら「ねん〜費」やな！...すんません、親父ギャグが止まりませんわ〜'
+        ],
+        customPrompt: 'あなたは奇跡査定センター社長のAI桑名社長 #0083です。車の買取・販売のプロフェッショナルでありながら、常にユーモアと冗談を交えて会話します。関西弁風の親しみやすい口調で、車に関する駄洒落や軽いボケを必ず入れてください。お客様を笑顔にしながら、的確なアドバイスを提供することがあなたの使命です。'
+      }
+    },
+    {
+      id: 'professional-kuwana',
+      name: 'プロフェッショナルAI桑名社長',
+      description: '丁寧で信頼できる、真面目な車買取・販売のプロフェッショナル',
+      emoji: '💼',
+      data: {
+        name: 'AI桑名社長 #0083',
+        personality: '真面目で信頼できる車買取・販売のプロフェッショナル。丁寧で親切、お客様第一主義',
+        speakingStyle: '丁寧語を基調とした親しみやすい口調。専門用語も分かりやすく説明する',
+        interests: ['車買取・販売', '顧客満足', '品質向上', '信頼関係構築', '市場分析'],
+        conversationExamples: [
+          'いらっしゃいませ。車の買取・販売でしたら、私にお任せください',
+          '車の状態を詳しく拝見させていただき、適正な価格をご提示いたします',
+          'お客様のご希望に沿えるよう、最善を尽くさせていただきます'
+        ],
+        customPrompt: 'あなたは奇跡査定センター社長のAI桑名社長 #0083です。車買取・販売のプロフェッショナルとして、常にお客様第一で丁寧な対応を心がけてください。'
+      }
+    }
+  ]
+
   // 既存設定の読み込み
   useEffect(() => {
     loadPersonality()
@@ -48,6 +89,11 @@ export default function PersonalitySetup({ onSave }: PersonalitySetupProps) {
     } finally {
       setIsLoading(false)
     }
+  }
+
+  // プリセット選択
+  const selectPreset = (presetData: PersonalityData) => {
+    setFormData(presetData)
   }
 
   const handleInputChange = (field: keyof PersonalityData, value: string) => {
@@ -114,29 +160,8 @@ export default function PersonalitySetup({ onSave }: PersonalitySetupProps) {
     }
   }
 
-  const presetPersonalities = [
-    {
-      name: '親しい友人',
-      personality: 'フレンドリーで気さく、少しおしゃべり好き。相手のことを気にかける優しい性格',
-      speakingStyle: 'タメ口で話し、「〜だよ」「〜だね」といった親しみやすい口調',
-    },
-    {
-      name: 'プロフェッショナル',
-      personality: '知的で落ち着いている。専門的な知識が豊富で、論理的に物事を考える',
-      speakingStyle: '丁寧語で話し、「です・ます」調。簡潔で分かりやすい説明を心がける',
-    },
-    {
-      name: 'エンスージアスト',
-      personality: 'エネルギッシュで前向き。新しいことに興味津々で、相手のチャレンジを応援する',
-      speakingStyle: '感嘆符を多用し、「すごいね！」「面白そう！」といった表現を使う',
-    }
-  ]
-
-  const applyPreset = (preset: typeof presetPersonalities[0]) => {
-    setFormData(prev => ({
-      ...prev,
-      ...preset
-    }))
+  const applyPreset = (preset: typeof presetCharacters[0]) => {
+    setFormData(preset.data)
   }
 
   if (isLoading) {
@@ -156,17 +181,31 @@ export default function PersonalitySetup({ onSave }: PersonalitySetupProps) {
 
       {/* プリセット選択 */}
       <div className="mb-8">
-        <h3 className="text-lg font-semibold mb-4">クイック設定</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {presetPersonalities.map((preset, index) => (
+        <h3 className="text-xl font-bold mb-4 text-center">🎭 キャラクター選択</h3>
+        <p className="text-gray-600 text-center mb-6">お好みのAI桑名社長のキャラクターを選択してください</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {presetCharacters.map((preset) => (
             <button
-              key={index}
+              key={preset.id}
               onClick={() => applyPreset(preset)}
-              className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors text-left"
+              className="p-6 border-2 border-gray-200 rounded-2xl hover:border-blue-400 hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50 transition-all duration-300 text-left group hover:shadow-lg"
             >
-              <h4 className="font-semibold mb-2">{preset.name}</h4>
-              <p className="text-sm text-gray-600 mb-2">{preset.personality}</p>
-              <p className="text-xs text-gray-500">{preset.speakingStyle}</p>
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                  {preset.emoji}
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                    {preset.name}
+                  </h4>
+                  <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                    {preset.description}
+                  </p>
+                  <div className="text-xs text-blue-600 font-medium">
+                    タップして選択 →
+                  </div>
+                </div>
+              </div>
             </button>
           ))}
         </div>

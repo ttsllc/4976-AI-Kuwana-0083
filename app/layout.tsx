@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_JP } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,13 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "700"],
-  display: "swap",
-  preload: true,
-});
 
 export const metadata: Metadata = {
   title: "AI桑名社長 #0083 - 奇跡査定センター | 中古車・新車買取販売",
@@ -41,8 +34,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}
-        style={{ fontFamily: "'Noto Sans JP', var(--font-noto-sans-jp), 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', system-ui, sans-serif" }}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ fontFamily: "'Noto Sans JP', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', system-ui, sans-serif" }}
       >
         {children}
       </body>

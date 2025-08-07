@@ -15,8 +15,8 @@ export default function RealTimeChat({ onTranscript, onResponse, isEnabled }: Re
   const [currentTranscript, setCurrentTranscript] = useState('')
   
   const recognitionRef = useRef<any>(null)
-  const silenceTimeoutRef = useRef<NodeJS.Timeout>()
-  const responseTimeoutRef = useRef<NodeJS.Timeout>()
+  const silenceTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const responseTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Web Speech API の初期化
   useEffect(() => {

@@ -457,3 +457,7 @@ Custom voices: 2
  POST /api/chat 200 in 3068ms
  POST /api/text-to-speech 200 in 4916ms
  POST /api/text-to-speech 200 in 5299ms
+ GET /api/weather 500 in 25ms
+ POST /api/chat 200 in 9959ms
+ POST /api/text-to-speech 200 in 24495ms
+ POST /api/text-to-speech 200 in 25590ms

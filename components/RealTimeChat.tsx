@@ -76,7 +76,9 @@ export default function RealTimeChat({ onTranscript, onResponse, isEnabled }: Re
           setCurrentTranscript('')
           
           // 沈黙タイマーをリセット
-          clearTimeout(silenceTimeoutRef.current)
+          if (silenceTimeoutRef.current) {
+            clearTimeout(silenceTimeoutRef.current)
+          }
           startSilenceTimer()
         } else if (interimTranscript) {
           onTranscript(interimTranscript, false)
@@ -90,8 +92,14 @@ export default function RealTimeChat({ onTranscript, onResponse, isEnabled }: Re
       if (recognitionRef.current) {
         recognitionRef.current.stop()
       }
-      clearTimeout(silenceTimeoutRef.current)
+      if (silenceTimeoutRef.current) {
+        clearTimeout(silenceTimeoutRef.current)
+      }
+      if (responseTimeoutRef.current) {
+        if (responseTimeoutRef.current) {
       clearTimeout(responseTimeoutRef.current)
+    }
+      }
     }
   }, [isEnabled, isConnected])
 
@@ -99,7 +107,9 @@ export default function RealTimeChat({ onTranscript, onResponse, isEnabled }: Re
   const processUserInput = useCallback(async (text: string) => {
     if (text.trim().length < 3) return // 短すぎる入力は無視
     
-    clearTimeout(responseTimeoutRef.current)
+    if (responseTimeoutRef.current) {
+      clearTimeout(responseTimeoutRef.current)
+    }
     
     try {
       const response = await fetch('/api/realtime-chat', {
@@ -143,8 +153,14 @@ export default function RealTimeChat({ onTranscript, onResponse, isEnabled }: Re
       if (recognitionRef.current) {
         recognitionRef.current.stop()
       }
-      clearTimeout(silenceTimeoutRef.current)
+      if (silenceTimeoutRef.current) {
+        clearTimeout(silenceTimeoutRef.current)
+      }
+      if (responseTimeoutRef.current) {
+        if (responseTimeoutRef.current) {
       clearTimeout(responseTimeoutRef.current)
+    }
+      }
     } else {
       // 開始
       setIsConnected(true)

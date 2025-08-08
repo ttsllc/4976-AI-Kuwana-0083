@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "AI桑名社長 #0083 - 奇跡査定センター | 中古車・新車買取販売",
-  description: "奇跡査定センター社長AI桑名社長 #0083と対話して、車買取・販売の極意を学ぼう！社会人大学創設者・湘南える新聞社社長による車業界のプロ査定アドバイス。",
+  title: "AI桑名社長 #0084 - 奇跡査定センター | 中古車・新車買取販売",
+  description: "奇跡査定センター代表AI桑名社長 #0084と対話して、車買取・販売の極意を学ぼう！社会人大学創設者・湘南える新聞社代表による車業界のプロ査定アドバイス。",
 };
 
 export default function RootLayout({

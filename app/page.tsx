@@ -178,10 +178,10 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-gray-900 japanese-text tracking-tight leading-tight">
-                  AI桑名社長 #0083
+                  AI桑名社長 #0084
                 </h1>
-                <p className="text-base text-gray-600 font-medium">中古車・新車買取販売 | 奇跡査定センター社長</p>
-                <p className="text-sm text-gray-500 font-mono">Version 0083</p>
+                <p className="text-base text-gray-600 font-medium">中古車・新車買取販売 | 奇跡査定センター代表</p>
+                <p className="text-sm text-gray-500 font-mono">Version 0084</p>
               </div>
             </div>
             
@@ -291,10 +291,10 @@ export default function Home() {
                     </>
                   )}
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 japanese-text mb-1">AI桑名社長 #0083</h2>
-                <p className="text-base text-gray-600 font-medium">奇跡査定センター社長</p>
-                <p className="text-xs text-gray-500 mt-1">社会人大学創設者 | 湘南える新聞社社長</p>
-                <p className="text-sm text-gray-500 font-mono mt-1">Version 0083</p>
+                <h2 className="text-2xl font-bold text-gray-900 japanese-text mb-1">AI桑名社長 #0084</h2>
+                <p className="text-base text-gray-600 font-medium">奇跡査定センター代表</p>
+                <p className="text-xs text-gray-500 mt-1">社会人大学創設者 | 湘南える新聞社代表</p>
+                <p className="text-sm text-gray-500 font-mono mt-1">Version 0084</p>
               </div>
               <div className="flex justify-center mb-4">
                 {avatarMode === 'portrait' && (
@@ -622,7 +622,7 @@ export default function Home() {
       <footer className="mt-16 pb-8">
         <div className="text-center">
           <p className="text-sm text-gray-500 font-mono">
-            AI桑名社長 #0083 - Version 0083
+            AI桑名社長 #0084 - Version 0084
           </p>
           <p className="text-xs text-gray-400 mt-1">
             奇跡査定センター | 中古車・新車買取販売
